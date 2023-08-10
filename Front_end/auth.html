@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticating ID | GEE M Academy</title>
+    <script defer>
+        window.onload = function () {
+            // INPUT FETCH DROPDOWN
+            let searchParams = new URLSearchParams(window.location.search);
+            let userId = searchParams.get('userId');
+            document.getElementById('id-fill').value = userId;
+            document.getElementById("form1").submit();
+        }
+    </script>
+</head>
+<body>
+    <form action="/verify" autocomplete="off" id="form1" method='post'>
+        <input type="hidden" id="id-fill" name="sname">
+    </form>
+</body>
+
+</html>

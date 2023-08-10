@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">`
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Courses</title>
+    <!-- Sources -->
+    <link rel="stylesheet" href="mcourses-m.css">
+    <script src="js/navbar.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" crossorigin="anonymous"></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <style>
+        /* CSS styles for the form popup */
+        .blur {
+            filter: blur(10px) !important;
+        }
+
+        .form-popup {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            max-width: 400px;
+        }
+
+        .form-popup label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-popup input[type="text"],
+        .form-popup input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .form-popup input[type="text"]:focus,
+        .form-popup input[type="password"]:focus {
+            border-color: #4CAF50;
+        }
+
+        .form-popup input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-popup input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script defer>
+        function openForm() {
+            document.getElementById("popupForm").style.display = "block";
+            var div = document.querySelector(".main-container");
+            div.classList.add("blur");
+        }
+
+        function closeForm() {
+            document.getElementById("popupForm").style.display = "none";
+            var div = document.querySelector(".main-container");
+            div.classList.remove("blur");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Form Popup -->
+    <div id="popupForm" class="form-popup">
+        <form action="/create_teacher" method="post">
+            <div class="form-group">
+                <label for="id">TEACHER ID:</label>
+                <input type="text" id="id" name="t_id" required>
+            </div>
+            <div class="form-group">
+                <label for="name">TEACHER NAME:</label>
+                <input type="text" id="name" name="t_name" required>
+            </div>
+            <div class="form-group">
+                <label for="phno">Phone number:</label>
+                <input type="text" id="phno" name="phno" required>
+            </div><br>
+            <input type="submit" value="Submit">
+            <button type="button" onclick="closeForm()" id="closeformbtn">x</button>
+        </form>
+    </div>
+    <div class="main-container">
+
+
+        <div class="contents">
+            <nav>
+                <div class="logo" style="display: flex;margin: auto;">
+                    <img src="i/logo.png" alt="Logo" style="display: block;height: 45px;width: auto;">
+                    <span
+                        style="display: block;margin:auto 0.5rem;font-weight: 500;font-size: 20px;text-transform: uppercase;">ABC
+                        school Chennai</span>
+                </div>
+                <div class="navbar-text">
+                    <p>Education is a journey,not a race</p>
+                </div>
+                <div class="navbar-button">
+                    <a href="http://10.5.10.133:3000/">
+                        <div class="navbar-button">
+                            Logout
+                        </div>
+                    </a>
+                </div>
+            </nav><br><br>
+            <div class="all">
+                <div class="grid-container">
+                    <a href="subsections">
+                        <div class="grid-item">Subsections</div>
+                    </a>
+                    <a>
+                        <div class="grid-item highlight">Teachers</div>
+                    </a>
+                </div>
+                <div class="home-contents">
+                    <div class="my-courses"><br><br>
+                        <button onclick="openForm()" class="addcrbtn"><i class="fa-solid fa-plus"></i> Add New
+                            Teacher</button>
+                        <div class="my-courses-table">
+
+                            <table class="tabletagstud">
+                                <tr>
+                                    <th title="Course Number">S.NO</th>
+                                    <th title="Course Name">TEACHER ID</th>
+                                    <th title="Student Count">TEACHER NAME</th>
+                                    <th title="Phone">PHNO</th>
+                                    <th title="Action">ACTION</th>
+                                </tr>
+                                <% for(var i=0;i < Object.keys(obj).length; i++ ) { %>
+                                    <tr>
+                                        <td>
+                                            <%= i + 1 %>
+                                        </td>
+                                        <td>
+                                            <%= obj[i].t_id %>
+                                        </td>
+                                        <td>
+                                            <%= obj[i].t_name %>
+                                        </td>
+                                        <td>
+                                            <%= obj[i].phno %>
+                                        </td>
+                                        <td>
+                                            <button class="manage-stud">Manage</button>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+
+                                        <!-- http://10.5.10.133:3000/create_subsection -->
+
+
+
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Verified Student | GEE M Academy</title>
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        .containerz {
+            box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+            background-color: #fff;
+            max-width: 500px;
+            margin-top: 90px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .verify-block {
+            border-bottom: 1px solid #eee;
+            padding: 0.5em;
+            text-align: center;
+            box-sizing: border-box;
+            background: tomato;
+            margin: -18px;
+            color: #fff;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        header {
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        input,
+        select {
+            border: none;
+            font-weight: bold;
+            color: tomato;
+            background-color: transparent;
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+        }
+    </style>
+</head>
+
+<body>
+
+    <script defer>
+        const name = document.getElementById("namevalue").value;
+        const mobile = document.getElementById("mobvalue").value;
+        const email = document.getElementById("emailvalue").value;
+        const drop = document.getElementById("dropvalue").value;
+    </script>
+
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <a href="../index.html" class="logo me-auto"><img src="../assets/img/logo1.png" alt=""
+                    class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="../courses.html#UG">UG Programme</a></li>
+                            <li><a href="../courses.html#PG">PG Programme</a></li>
+                            <li><a href="../courses.html#OTHER">Other Programee</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <!-- <a href="apply.html" class="get-started-btn">Apply Now</a> -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div data-aos="fade-up">
+
+
+                <div class="container" data-aos="fade-up">
+
+                    <div class="row mt-5">
+
+
+
+                    </div>
+
+                </div>
+                <center>
+
+
+                    <div class="containerz">
+                        <div class="verify-block"><b><span><i class="fa-solid fa-circle-xmark"></i> NO STUDENT FOUND
+                                    </span></b></div>
+                        <center><b><span style="display: block;margin-top: 35px;"> GEE M Academy</span></b></center>
+                        <!-- <hr> -->
+                        <!--
+                            <form>
+                            <label for=" fname">Name</label>
+                            <input type="text" id="uname" name="name" value="" required disabled>
+
+                            <label for="lname">Mobile Number</label>
+                            <input type="text" id="umobile" name="mobile" value="" required disabled>
+
+
+                            <label for="lname">E-mail address</label>
+                            <input type="email" id="uemail" name="email" placeholder="" required disabled>
+
+                            <label for="course-drop">Course interested</label>
+                            <select id="course-drop" name="Course" required disabled>
+
+                                <option value="">Not Found</option>
+                                <optgroup label="UG PROGRAMMES">
+                                    <option value="BA-TAMIL">B.A (Tamil)</option>
+                                    <option value="BA-ENGLISH">B.A (English)</option>
+                                    <option value="BA-HISTORY">B.A (History)</option>
+                                    <option value="BA-ECONOMICS">B.A (Economics)</option>
+                                    <option value="BCOM">B.Com</option>
+                                    <option value="BBA">B.B.A</option>
+                                    <option value="BLISc">B.L.I.Sc(Bachelor of Library and Information science)</option>
+                                </optgroup>
+                                <optgroup label="PG PROGRAMMES">
+                                    <option value="MA-TAMIL">M.A (Tamil)</option>
+                                    <option value="MA-ENGLISH">M.A (English)</option>
+                                    <option value="MA-HISTORY">M.A (History)</option>
+                                    <option value="MCOM">M.Com</option>
+                                    <option value="MA-JOURNALISM">M.A (Journalism & Mass Communication)</option>
+                                    <option value="MLISc">M.L.I.Sc(Master of Library and Information science)
+                                    </option>
+                                </optgroup>
+                                <optgroup label="OTHER PROGRAMMES">
+                                    <option value="PGDCA">P.G.D.C.A (Post Graduate Diploma in Computer Application)
+                                    </option>
+                                    <option value="CLISc">C.L.I.Sc. (Certificate in Library and Information science)
+                                    </option>
+                                    <option value="CYHE">C.Y.H.E.( Certificate in Yoga for Human Excellence)</option>
+                                    <option value="DYHE">D.Y.H.E. ( Diploma in Yoga for Human Excellence)</option>
+                                </optgroup>
+                                <optgroup label="ADDITIONAL PROGRAMMES">
+                                    <option value="MULTI-MEDIA">MULTI MEDIA (Summer Program)</option>
+                                    <option value="FINE-ARTS-KIDS">FINE ARTS (For Kids)</option>
+                                </optgroup>
+                            </select>
+
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_autoresponse"
+                                value="Thank you for applying on GEE M Academy! We'll contact you within 24 hours of submission.">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_subject" value="NEW Admission Application">
+                            <input type="hidden" name="_next" value="https://geem-aca.web.app/success.html">
+                        </form>
+                    </div>
+
+
+                    </form>-->
+                </center>
+            </div>
+            <script defer>
+                document.getElementById("uname").value = name;
+                document.getElementById("umobile").value = mobile;
+                document.getElementById("uemail").value = email;
+                document.getElementById("course-drop").value = drop;
+            </script>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div style="margin-right:30px" class="col-lg-3 col-md-6 footer-contact">
+                        <h3><b>GEE M ACADEMY</b></h3>
+                        <p>
+                            SPG Ganesh Murugan <br>
+                            Shabnam Mini Tower(Above SPG Studio),Near Clock Tower<br>
+                            Pattukottai<br><br>
+                            <strong>Phone:&nbsp;</strong>+91 9443335620<br>
+                            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>+91
+                            9865155547<br><br>
+
+                            <strong>Email:</strong> geemacad@gmail.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">Courses</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../about.html">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../contact.html">Contact</a></li>
+                            <!--li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li-->
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+
+                        <h4>UG Programmes</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">BA Tamil</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">BA English</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">BA History</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">BA Economics</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">BBA</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">B.L.I.Sc</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>PG Programmes</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">MA Tamil</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">MA English</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">MA History</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">M.Com</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">M.L.I.Sc</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Other Programmes</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">P.G.D.C.A</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">C.L.I.Sc</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">C.Y.H.E</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../courses.html">D.Y.H.E</a></li>
+                        </ul>
+                    </div>
+
+                    <!--div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Register">
+            </form>
+          </div-->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Gee M Academy</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+                    Developed by <a href="mailto:eonsyscare@gmail.com">EONSYS</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="tel:+91 9443335620"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:geemacad@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <!--a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a-->
+            </div>
+        </div><br>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

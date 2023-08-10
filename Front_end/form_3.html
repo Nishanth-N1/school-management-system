@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('background-image.jpg');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="/create_exam" method="post">
+      <div class="form-group">
+        <label for="id">EXAM ID:</label>
+        <input type="text" id="id" name="exam_id" required>
+      </div>
+      <div class="form-group">
+        <label for="name">EXAM NAME:</label>
+        <input type="text" id="name" name="exam_name" required>
+      </div>
+      <div class="form-group">
+        <label for="phno">EXAM DATE:</label>
+        <input type="text" id="date" name="exam_date" required>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

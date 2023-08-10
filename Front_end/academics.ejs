@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">`
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Courses</title>
+    <!-- Sources -->
+    <link rel="stylesheet" href="mcourses-m.css">
+    <script src="js/navbar.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" crossorigin="anonymous"></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+
+        <div class="contents">
+            <nav>
+                <div class="logo" style="display: flex;margin: auto;">
+                    <img src="i/logo.png" alt="Logo" style="display: block;height: 45px;width: auto;">
+                    <span
+                        style="display: block;margin:auto 0.5rem;font-weight: 500;font-size: 20px;text-transform: uppercase;">ABC
+                        school Chennai</span>
+                </div>
+                <div class="navbar-text">
+                    <p>Education is a journey,not a race</p>
+                </div>
+                <a href="http://10.5.10.133:3000/class_login">
+                    <div class="navbar-button">
+                        Logout
+                    </div>
+                </a>
+            </nav><br><br>
+            <div class="all">
+                <div class="my-courses"><br><br>
+                    <a href="/add_exam"><button class="addcrbtn"><i class="fa-solid fa-plus"></i> Add New
+                            Exam</button></a>
+                    <div class="my-courses-table">
+                        <form>
+                            <input type="search" placeholder="Search">
+                            <select name="filter" id="markis">
+                                <option value="Total">Total</option>
+                                <option value="Tamil">Tamil</option>
+                                <option value="English">English</option>
+                                <option value="Maths">Maths</option>
+                                <option value="Science">Science</option>
+                                <option value="Social Science">Social Science</option>
+                            </select>
+                            <input type="submit" placeholder="Search for students">
+                            <input type="text" placeholder="ExamID">
+                        </form>
+                        <div class="home-contents">
+                            <div class="my-courses"><br><br>
+
+                                <div class="my-courses-table">
+
+                                    <table class="tabletagstud">
+                                        <tr>
+                                            <th title="Course Number">S.NO</th>
+
+                                            <th title="Student Count">STUDENT NAME</th>
+                                            <!-- <th title="Phone">EXAM NAME</th> -->
+                                            <th title="Phone">PERCENTAGE</th>
+                                        </tr>
+                                        <% for(var i=0;i < Object.keys(obj).length; i++ ) { %>
+                                            <tr>
+                                                <td>
+                                                    <%= i + 1 %>
+                                                </td>
+                                                <td>
+                                                    <%= obj[i].student_name %>
+                                                </td>
+                                                <!-- <td><%= obj[i].student_rollno %></td> -->
+                                                <td>
+                                                    <%= 85 %>
+                                                </td>
+                                                <!-- <td><%= obj[i].t_name %></td> -->
+                                                <td>
+                                                    <button class="manage-stud">Manage</button>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</body>
+
+</html>
